@@ -13,7 +13,7 @@
         <div
           class="text-center text-2xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
         >
-          💻 Programmer Expenses Assistant
+          🖥️ Programmer Expenses Assistant
         </div>
 
         <!-- Tabs for Assistant and History -->
@@ -113,7 +113,7 @@
             >
             <input
               type="number"
-              id="savings"
+              id="savings-Percentage"
               class="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
               placeholder="Savings %"
             />
@@ -134,7 +134,7 @@
         <!-- Results -->
         <div
           id="results"
-          class="mt-8 hidden from-blue-50 to-purple-50 p-4 rounded-lg shadow-md border border-blue-200"
+          class="mt-8 from-blue-50 to-purple-50 p-4 rounded-lg shadow-md border border-blue-200 hidden"
         >
           <h3
             class="text-lg font-semibold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
@@ -147,7 +147,7 @@
             >
               <p class="text-xs text-gray-500">Total Expenses</p>
               <p class="text-sm font-bold text-gray-800">
-                ৳<span id="total-expenses">00</span>
+                💲<span id="total-expenses">00</span>
               </p>
             </div>
             <div
@@ -155,7 +155,7 @@
             >
               <p class="text-xs text-gray-500">Balance</p>
               <p class="text-sm font-bold text-gray-800">
-                ৳<span id="balance">00</span>
+               💲<span id="balance">00</span>
               </p>
             </div>
             <div
@@ -163,7 +163,7 @@
             >
               <p class="text-xs text-gray-500">Savings Amount</p>
               <p class="text-sm font-bold text-gray-800">
-                ৳<span id="savings-amount">00</span>
+                💲<span id="savings-amount">00</span>
               </p>
             </div>
             <div
@@ -171,7 +171,7 @@
             >
               <p class="text-xs text-gray-500">Remaining Balance</p>
               <p class="text-sm font-bold text-gray-800">
-                ৳<span id="remaining-balance">00</span>
+                💲<span id="remaining-balance">00</span>
               </p>
             </div>
           </div>
@@ -182,17 +182,23 @@
           ⚠️ Total expenses cannot exceed your income!
         </p>
 
+        <p id="logic-error2" class="text-red-500 mt-4 hidden text-center">
+          ⚠️ You Don't Have Enough Money For Savings!
+        </p>
+
         <!-- History Section -->
         <div
           id="history-section"
-          class="bg-gradient-to-br hidden from-blue-50 to-purple-50 p-4 rounded-lg shadow-md border border-blue-200"
+          class="bg-gradient-to-br from-blue-50 to-purple-50 p-4 rounded-lg shadow-md border border-blue-200 hidden"
         >
           <h3
             class="text-lg font-semibold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
           >
             🕒 Expense History
           </h3>
-          <div id="history-list" class="grid grid-cols-2 gap-3"></div>
+          <div id="history-list" class="grid grid-cols-2 gap-3">
+
+          </div>
         </div>
       </div>
     </div>
